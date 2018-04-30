@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>MyMoviesQuiz - Choose the game mode</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <style type="text/css" media="screen">
+
+    .game-mode-container {
+      margin-top: 100px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    #btnPlay {
+      font-size: 1.5em;
+      cursor: pointer;
+      border-radius: 15px;
+      border-color: white;
+      box-shadow: 3px 3px rgba(248,149,192,0.6);
+    }
+
+    #btnPlay:active {
+      color: #CCC;
+      transform: scale(0.9, 0.9);
+      box-shadow: 3px 3px rgba(235,252,15,0.6);
+    }
+
+    .text-muted {
+      font-size: 1em;
+    }
+
+    .term-style {
+      font-size:0.8em;
+      margin-top:-5px;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-light">
+      <!-- My Quiz Logo -->
+      <div class="logo">
+        <div class="logo-quiz">
+          <a href="index.html">My Movie Quiz</a>
+        </div>
+      </div>
+      <!-- logo end -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="mr-auto"></div>
+        <div class="">
+          <form class="form-inline" class="" action="index.html" method="post">
+            <input type="text" class="form-control form-control-sm mr-sm-2" id="txtUsername" name="txtUsername" aria-label="Username Login" placeholder="Username">
+            <input type="password" class="form-control form-control-sm" id="txtPassword" name="txtPassword" aria-label="Password Login" placeholder="Password">
+            <button type="submit" class="btn btn-sm btn-success ml-2" id="btnSubmit" name="btnSubmit">Login</button>
+          </form>
+        </div>
+        <!-- after login - user options -->
+        <div class="login-options-container d-none">
+            <div class="row">
+              <div class="col-lg-4 mx-0 px-0">
+                <a href="#">
+                  <img src="/mymoviequiz/src/images/profile-icon.png" width="50" height="50" class="img-thumbnail border border-secondary mt-2" alt="profile photo">
+                </a>
+              </div>
+              <div class="col-lg-6 mx-0 text-left">
+                <a href="#">Settings</a><br>
+                <a href="#">Profile</a>
+                <a href="#">Logout</a>
+              </div>
+              <div class="col-lg-2 mx-0 px-0"></div>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Panel - tabs -->
+    <div class="container bg-light game-mode-container rounded">
+      <nav class="nav nav-tabs" id="gameModeTab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-random-tab" data-toggle="tab" href="#nav-random" role="tab" aria-controls="nav-random" aria-selected="true">
+          <h4>Random</h4>
+        </a>
+        <a class="nav-item nav-link" id="nav-category-tab" data-toggle="tab" href="#nav-category" role="tab" aria-controls="nav-category" aria-selected="false">
+          <h4>Category</h4>
+        </a>
+        <a class="nav-item nav-link" id="nav-challenge-tab" data-toggle="tab" href="#nav-challenge" role="tab" aria-controls="nav-challenge" aria-selected="false">
+          <h4>Daily Challenge</h4>
+        </a>
+      </nav>
+
+    <!-- Tabs Content -->
+      <div class="tab-content bg-light py-3" id="gameModeTabContent">
+        <!-- Random tab content -->
+        <div class="tab-pane fade show active" id="nav-random" role="tabpanel" aria-labelledby="nav-random-tab">
+          <div class="container">
+            <h2 class="text-center text-success">Random</h2>
+            <h5 class="my-2">How It Works</h5>
+            <p class="text-dark text-justify">
+              In this mode the quiz will be generated randomically, which means the questions will be mixed from diverse available movie categories.
+              It's the best way to test your general knowledge.
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12 text-center my-3">
+                  <button type="button" class="btn btn-success btn-lg" id="btnPlay" name="btnRandom">Play Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category tab content -->
+        <div class="tab-pane fade" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">
+          <div class="container">
+            <h2 class="text-center text-success">Category</h2>
+            <h5 class="my-2">How It Works</h5>
+            <p class="text-dark text-justify">
+              You're in charge! Choose whatever movie category you wish and all questions would be about that category, for example imagine you have selected 'Action'
+              then the questions could be about films like 'First Blood (Rambo)', 'Terminator', 'The Matrix', and many others examples, however be aware that one movie could
+              have many categories so in the example above 'Terminator' may appear in 'Action' and 'Sci-fi' category as well.
+            </p>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <form class="form-row">
+                    <div class="form-group col-lg-3 my-3">
+                      <label class="font-weight-bold" for="selectCategory">Choose Category</label>
+                      <select id="selectCategory" class="form-control" name="selectCategory">
+                        <option value="0">Choose one category</option>
+                        <option value="1">Action</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-lg-12 text-center my-3">
+                  <button type="button" class="btn btn-success btn-lg" id="btnPlay" name="btnCategory">Play Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Challenge tab content -->
+        <div class="tab-pane fade" id="nav-challenge" role="tabpanel" aria-labelledby="nav-challenge-tab">
+          <div class="container">
+            <h2 class="text-center text-success">Daily Challenge</h2>
+            <h5 class="my-2">How It Works</h5>
+            <p class="text-dark text-justify">
+              Welcome to the Daily Challenge! It's time to face the real test and prove that you're the best of the world, at least for one day.
+              In this mode you'll receive a game with 4 packs, each pack contains 10 questions that were randomly selected, answer as fast as you can and earn
+              the top spot. At the end of the contest the player with highest score wins. It's simple, it's fun and you should start right away!
+            </p>
+            <div class="container border border-primary w-75 rounded my-2 py-3">
+              <div class="row">
+                <div class="col-lg-12">
+
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label col-form-label-lg font-weight-bold">
+                      <input class="form-check-input mt-2" type="checkbox" id="checkChallenge" name="checkChallenge" value="1">
+                      Join the Daily Challenge Arena
+                    </label>
+                    <p class="text-muted term-style">
+                      Checking above confirms you agree with our <a href="../src/terms.html" target="_blank">Terms & Conditions</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-12 text-center my-3">
+                  <button type="button" class="btn btn-success btn-lg" id="btnPlay" name="btnPlay" disabled>Play Now</button>
+                </div>
+              </div>
+            </div>
+            <p class="text-muted" id="msgMembersOnly">
+              This mode is available only for members.
+              If you're not logged in, please <a href="#">log in</a> now or create a <a href="#">free account</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End of tabpanel -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+          $('#gameModeTab a[href="'+ window.location.hash +'"]').tab('show');
+
+          $('#btnPlay').click(function(){
+            //window.location = window.location.hash + "game.html" + $(this).name;
+            window.location = ("game.html#" + $(this).attr('name'));
+          });
+      });
+
+
+
+    </script>
+  </body>
+</html>

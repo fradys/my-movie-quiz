@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Movies Quiz - Online, free, fun, addictive movies quizzes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Allerta|Baloo+Paaji|Lilita+One|Tauri" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style type="text/css" media="screen">
+
+    .login-options-container {
+      font-size: 0.85em;
+      color: #ede500;
+    }
+
+    .login-options-container a:hover {
+      color: #b5b5fc;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-light">
+      <!-- My Quiz Logo -->
+      <div class="logo">
+        <div class="logo-quiz">
+          <a href="index.html">My Movie Quiz</a>
+        </div>
+      </div>
+      <!-- logo end -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="nav nav-pills mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="gamemode.html#nav-random" target="_self">Quick Play</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Quiz Modes</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="gamemode.html#nav-random" target="_self">Random</a>
+              <a class="dropdown-item" href="gamemode.html#nav-category" target="_self">Category</a>
+              <a class="dropdown-item" href="gamemode.html#nav-challenge" target="_self">Daily Challenge</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#howItWorks">How It Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <div class="form-container">
+          <form class="form-inline" action="userprofile.php" method="post">
+            <input type="text" class="form-control form-control-sm mr-sm-2" id="txtUsername" name="txtUsername" aria-label="Username Login" placeholder="Username">
+            <input type="password" class="form-control form-control-sm" id="txtPassword" name="txtPassword" aria-label="Password Login" placeholder="Password">
+            <button type="submit" class="btn btn-sm btn-success ml-2" id="btnSubmit" name="btnSubmit">Login</button>
+          </form>
+        </div>
+        <!-- after login - user options -->
+        <div class="login-options-container d-none">
+          <!-- <div class=""> -->
+            <div class="row">
+              <div class="col-lg-4 mx-0 px-0">
+                <a href="#">
+                  <img src="/mymoviequiz/src/images/profile-icon.png" width="50" height="50" class="img-thumbnail border border-secondary mt-2" alt="profile photo">
+                </a>
+              </div>
+              <div class="col-lg-6 mx-0 text-left">
+                <a href="#">Settings</a><br>
+                <a href="#">Profile</a>
+                <a href="#">Logout</a>
+              </div>
+              <div class="col-lg-2 mx-0 px-0"></div>
+            </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Play Now button -->
+    <div class="jumbotron">
+      <div class="container">
+        <button type="button" class="btn btn-success btn-lg" id="btnPlay" name="btnPlay">Play Now</button>
+        <h1 class="display-4 mt-3">Test your knowledge today! </h1>
+        <hr class="my-4">
+        <p class="lead"><span id="signupText">Sign up</span> now and enjoy all features including Daily Challenges and Custom Quiz Questions</p>
+        <button type="button" class="btn btn-dark btn-lg" id="btnSignup" name="btnSignup">Sign Up</button>
+      </div>
+    </div>
+
+    <!-- Available Modes -->
+    <div class="container" id="gameModes">
+      <div class="row justify-content-center">
+        <div class="mt-4 mb-4">
+          <h1 class="display-3 how-title">Game Modes</h1>
+        </div>
+      </div>
+      <div class="row col-sm-12">
+        <div class="card-deck">
+          <!-- Random -->
+          <div class="card">
+            <a href="gamemode.html#nav-random">
+              <img class="card-img-top img-fluid" src="images/shutterstock_302226008-680x400.jpg"  alt="Play Random">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title"><a href="gamemode.html#nav-random">Play Random Categories</a></h4>
+              <p class="card-text">This quick mode is excellent to test your skills and knowledge. Play now and let us randomically choose a category for you.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">No account needed</small>
+            </div>
+          </div>
+          <!-- Category -->
+          <div class="card">
+            <a href="gamemode.html#nav-category">
+              <img class="card-img-top" src="images/movies_categories.png" alt="Play by Category">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title"><a href="gamemode.html#nav-category">Play by Categories</a></h4>
+              <p class="card-text">Play specific category and master it, choose between action, drama, comedy and many more available for you.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">No account needed</small>
+            </div>
+          </div>
+          <!-- Daily Challenge -->
+          <div class="card">
+            <a href="gamemode.html#nav-challenge">
+              <img class="card-img-top" src="images/challenge-753479_640.png" alt="Daily Challenge">
+            </a>
+            <div class="card-body">
+              <h4 class="card-title"><a href="gamemode.html#nav-challenge">Play Daily Challenge</a></h4>
+              <p class="card-text">Test your knowledge against players from all over the world, a 24 hour competition where the fastest guarantee the top spot.
+                <a href="#">Log in</a> now and join.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"><a href="#">Sign up</a> now</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="container how-container" id="howItWorks">
+      <div class="row justify-content-center">
+        <div class="mt-4 mb-4">
+          <h1 class="display-3 how-title">How It Works</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <figure class="figure">
+            <img class="figure-img img-fluid rounded" src="/mymoviequiz/src/images/ricky-turner-445257.jpg" alt="Image of how it works">
+          </figure>
+        </div>
+        <!-- <div class="col-md-5">
+          <img src="/mymoviequiz/src/images/ricky-turner-445257.jpg" class="img-fluid"   alt="Image of how it works">
+        </div> -->
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-6">
+          <ul>
+            <li>
+              <h3 class="how-list-items">No account needed - <a href="#" >Play Now</a></h1>
+            </li>
+            <li>
+              <h1 class="how-list-items">Go faster and earn huge bonus points</h1>
+            </li>
+            <li>
+              <h1 class="how-list-items">3 Challenging modes</h1>
+            </li>
+            <li>
+              <h1 class="how-list-items">Compete against players from all over the world</h1>
+            </li>
+            <li>
+              <h1 class="how-list-items"><a href="#">Sign up</a> to unlock stats, modes and many more</h1>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="height:300px;">
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container py-3 text-light rounded" style="background-color:rgba(200,200,200,0.85  );">
+        <a href="https://unsplash.com/" target="_blank">Photos by Unsplash</a>
+      </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        // Add the functionality in btnPlay
+        $('#btnPlay').click(function(){
+          window.location.href = "gamemode.html";
+        });
+
+        $('#btnSignup').click(function(event) {
+          /*TEST - REMOVE LATER */
+          $('.login-options-container').toggleClass('d-none');
+          $('.form-container').toggleClass('d-none');
+        });
+
+      });
+
+    </script>
+  </body>
+</html>

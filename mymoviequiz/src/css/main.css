@@ -1,0 +1,70 @@
+  @import url("https://fonts.googleapis.com/css?family=Allerta|Baloo+Paaji|Lilita+One|Tauri");
+
+  .navbar {
+    height: 75px !important;
+  }
+
+  .logo div {
+      font-family: "Baloo Paaji", "Helvetica", sans-serif;
+      font-size: 35px !important;
+      font-weight: bold;
+      text-align: center;
+  }
+  /* Darker text on medium background */
+  .logo-quiz {
+      color: #f81;
+      /*background-color: rgba(99,99,99,0.6);*/
+      text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+  }
+
+  .navbar {
+    background-color: rgba(99,99,99,0.6);
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .login-options-container {
+    font-size: 0.85em;
+    color: #ede500;
+  }
+
+  .login-options-container a:hover {
+    color: #b5b5fc;
+  }
+
+    body {
+    background: url('../images/peter-lewicki-411606.jpg') center repeat;
+    background-clip: border-box;
+    background-blend-mode: soft-light;
+  }
+
+  .jumbotron {
+    margin-top: 73px;
+    background: rgba(90,234,255,0.6);
+    text-align: center;
+  }
+
+  .jumbotron h1 {
+    text-shadow: 1px 1px #CCC;
+  }
+
+  .jumbotron .lead {
+    color: #313131;
+    font-weight: 600;
+    font-size: 1.4em;
+    text-shadow: 1px 1px #CCC;
+  }
+
+  .jumbotron button {
+    border-radius: 15px;
+    border-color: white;
+    box-shadow: 3px 3px rgba(248,149,192,0.6);
+  }
+
+  .jumbotron button:active {
+    color: #CCC;
+    transform: scale(0.9, 0.9);
+  }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Movies Quiz - Online, free, fun, addictive movies quizzes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style type="text/css" media="screen">
+      .container a { text-decoration: none; }
+      .container   { margin-top: 70px;  }
+      .version     { font-style: italic;}
+      .bold        { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md fixed-top navbar-light">
+      <!-- My Quiz Logo -->
+      <div class="logo">
+        <div class="logo-quiz">
+          <a href="index.html">My Movie Quiz</a>
+        </div>
+      </div>
+      <!-- logo end -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="mr-auto"></div>
+        <form class="form-inline d-inline-flex" class="" action="index.html" method="post">
+          <input type="text" class="form-control form-control-sm mr-sm-2" id="txtUsername" name="txtUsername" aria-label="Username Login" placeholder="Username" disabled>
+          <input type="password" class="form-control form-control-sm" id="txtPassword" name="txtPassword" aria-label="Password Login" placeholder="Password" disabled>
+          <button type="submit" class="btn btn-sm btn-success ml-2" id="btnSubmit" name="btnSubmit" disabled>Login</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- Main Content - Populated using JSON -->
+
+    <div class="container bg-light text-dark py-3 px-3 rounded">
+      <h2 class="display-4 text-center font-weight-bold">Terms and Conditions</h2>
+      <div class="content py-3 px-3 text-justify" id="divContent"></div>
+      <hr class="my-4">
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- This version below does not support AJAX -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        // Load info in selected DIV
+        $('#divContent').load("../src/data/json/terms-data.html", function(responseTxt, statusTxt, httpObj){
+          if(statusTxt == 'success'){
+            $(this).html(responseTxt);
+          } else if (statusTxt == 'error'){
+            $(this).html('<p class="error">Something went wrong. Please try again!</p>');
+          }
+        });
+
+      });
+
+    </script>
+  </body>
+</html>

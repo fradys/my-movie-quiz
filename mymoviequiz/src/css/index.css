@@ -1,0 +1,98 @@
+  /*
+    MyMoviesQuiz
+    Specific css file to index.html
+  */
+  @import url("https://fonts.googleapis.com/css?family=Allerta|Baloo+Paaji|Lilita+One|Tauri");
+
+  .nav-item:first-child {
+    margin-left: 3em;
+  }
+
+  .nav-item {
+    color: #ffff00;  /*#216;*/
+
+    text-shadow: 1px 1px #888;
+    margin-top: 0.6em;
+    font-size: 1.2em;
+    font-family: 'Tauri', sans-serif;
+  }
+
+  .nav-item:hover {
+    transform: scale(1.1, 1.1);
+    color: white;
+  }
+
+  .dropdown-menu {
+    background-color: rgba(73,73,73,0.7);
+    text-shadow: none;
+    color: #ff2;
+    font-size: 0.9em;
+  }
+
+  .dropdown-item:hover {
+    color: #828405;
+  }
+
+  #signupText {
+    font-weight: bolder;
+    color: #212121;
+    text-shadow: 1px 1px #057718;
+  }
+
+  #signupText:hover {
+    color: #d2dd4b;
+  }
+
+  #btnPlay {
+    font-size: 2.5em;
+    cursor: pointer;
+  }
+
+  #btnPlay:active {
+    box-shadow: 3px 3px rgba(235,252,15,0.6);
+  }
+
+  #btnSignup:hover {
+    cursor: pointer;
+  }
+
+  .how-container {
+    height: 500px;
+  }
+
+  .how-container img {
+    border: 2px solid #CCC;
+    border-radius: 5px;
+  }
+
+  how-container ul, li {
+    list-style: none;
+  }
+
+  .how-title {
+    color: white;
+    font-weight: bold;
+    text-shadow: 3px 3px rgba(40,30,40,0.6);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .how-list-items {
+    /*color: #edffb2;*/
+    color: #ede32d;
+    font-size: 2.0em;
+    text-shadow: 3px 3px black;
+  }
+
+  .how-container a {
+    text-decoration: none;
+    font-style: normal;
+    background-color: rgba(15,15,15,0.9);
+    border-radius: 10%;
+    padding: 0 5px;
+  }
+
+  .card-deck a {
+    text-decoration: none;
+    font-style: normal;
+  }
